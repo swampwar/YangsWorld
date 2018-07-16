@@ -25,7 +25,7 @@ public class AuthFailLogger {
 		System.out.printf("AuthFail [type=badpw, userid=%s, pw=%s]\n", userId, userPw);
 		failCounts++;
 		
-		if(threshold > 0 && failCounts > threshold) {
+		if(threshold > 0 && failCounts >= threshold) {
 			notifyTooManyFail();
 		}
 	}
